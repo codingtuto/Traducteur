@@ -7,7 +7,7 @@ translateBtn = document.querySelector("button"),
 
 selectTag.forEach((tag, id) => {
     for (let country_code in countries) {
-        let selected = id == 0 ? country_code == "en-GB" ? "selected" : "" : country_code == "hi-IN" ? "selected" : "";
+        let selected = id == 0 ? country_code == "fr-FR" ? "selected" : "" : country_code == "en-GB" ? "selected" : "";
         let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
         tag.insertAdjacentHTML("beforeend", option);
     }
@@ -33,7 +33,7 @@ translateBtn.addEventListener("click", () => {
     translateFrom = selectTag[0].value,
     translateTo = selectTag[1].value;
     if(!text) return;
-    toText.setAttribute("placeholder", "Translating...");
+    toText.setAttribute("placeholder", "Traduction en cours...");
     let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
     fetch(apiUrl).then(res => res.json()).then(data => {
         toText.value = data.responseData.translatedText;
@@ -42,7 +42,7 @@ translateBtn.addEventListener("click", () => {
                 toText.value = data.translation;
             }
         });
-        toText.setAttribute("placeholder", "Translation");
+        toText.setAttribute("placeholder", "Traduction");
     });
 });
 
