@@ -1,7 +1,8 @@
 {
+  "theme_color": "white",
   "background_color": "blue",
   "description": "Traduire vos textes en plusieurs langue.",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon/translate.png",
