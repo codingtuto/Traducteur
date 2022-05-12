@@ -1,0 +1,15 @@
+{
+  "background_color": "blue",
+  "description": "Traduire vos textes en plusieurs langue.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/translate.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Traducteur V1.0",
+  "short_name": "Traducteur",
+  "start_url": "/index.html"
+}
